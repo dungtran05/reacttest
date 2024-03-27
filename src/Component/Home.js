@@ -1,9 +1,11 @@
+import axios from 'axios';
 import React from 'react'
 
 function Home() {
+    const res =  axios.get('https://localhost:7214/api/Users');
   return (
     <div>
-      Dung pk 999
+      {JSON.parse(res)}
     </div>
   )
 }
